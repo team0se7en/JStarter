@@ -16,16 +16,16 @@ we also used MvRx concepts
 Add it in your root build.gradle at the end of repositories:
 ```Gradle
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
 ```
 Add the dependency in your app build.gradle file
 ```Gradle
 dependencies {
 	...
-    implementation 'com.github.team0se7en:JStarter:beta'
+    implementation 'com.github.team0se7en:JStarter:beta2'
 }
 ```
