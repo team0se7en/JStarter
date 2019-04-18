@@ -1,4 +1,4 @@
-###JStarter
+### JStarter
 
 - this library contains all base classes needed for our projects
 
