@@ -52,6 +52,7 @@ versions.circleProgress = '1.2.1'
 versions.scaleLayout = '1.2.1'
 versions.graph = '3.1.0'
 versions.indicator = '3.0.3'
+versions.maven_plugin = '2.1'
 
 
 def deps = [:]
@@ -132,10 +133,11 @@ rxjava.rxAndroid= "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid"
 deps.rxJava = rxjava
 
 def build_versions = [:]
-build_versions.min_sdk = 21
+build_versions.min_sdk = 16
 build_versions.target_sdk = 28
 ext.build_versions = build_versions
 
+deps.maven_plugin = "com.github.dcendents:android-maven-gradle-plugin:$versions.maven_plugin"
 deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 
 ext.deps = deps

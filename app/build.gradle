@@ -27,7 +27,9 @@ dependencies {
     implementation deps.kotlin.kotlin_jre
     implementation deps.android.appcompat
     implementation deps.android.androidx_core
+    implementation 'com.github.team0se7en:JStarter:beta'
     testImplementation deps.test.junit
     androidTestImplementation deps.test.testRunner
     androidTestImplementation deps.test.espresso
+    implementation project(path: ':jstarter')
 }
