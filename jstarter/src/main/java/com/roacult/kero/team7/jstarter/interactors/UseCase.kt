@@ -1,6 +1,5 @@
 package com.roacult.kero.team7.jstarter.interactors
 
-import android.util.Log
 import com.roacult.kero.team7.jstarter.exception.Failure
 import com.roacult.kero.team7.jstarter.functional.AppRxSchedulers
 import com.roacult.kero.team7.jstarter.functional.CouroutineDispatchers
@@ -36,21 +35,15 @@ abstract class Interactor<in P , out R >(dispatcher: CouroutineDispatchers){
 /**
  * interactore runs in background thread and return a stream
  * of Either values that's could be either @param R
- * or @param Failure if failure is null that's mean unknown failure
- * the observable returned by this interactor will never invoke
- * onError methode the callaback will be only in onNext methode
+ * or @param Failure
  * */
 
 abstract class ObservableEitherInteractor<R , in P , F:Failure>(private val schedulers:AppRxSchedulers){
-    private val subject = BehaviorSubject.create<Either<F? , R>>()
-    protected abstract fun buildObservable(p:P):Observable< Either<F? , R>>
+    private val subject = BehaviorSubject.create<Either<F , R>>()
+    protected abstract fun buildObservable(p:P):Observable< Either<F , R>>
 
-    fun observe(p : P , handler : (Either<F? , R>) -> Unit ) : Disposable {
-        buildObservable(p).onErrorReturn {
-            Log.v("unknown failure",it.message)
-            it.printStackTrace()
-            Either.Left<F?>(null)
-        }.subscribe(subject)
+    fun observe(p : P , handler : (Either<F , R>) -> Unit ) : Disposable {
+        buildObservable(p).subscribe(subject)
         return subject.subscribeOn(schedulers.io).observeOn(schedulers.main)
             .subscribe(handler)
     }

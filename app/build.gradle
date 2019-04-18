@@ -30,5 +30,4 @@ dependencies {
     testImplementation deps.test.junit
     androidTestImplementation deps.test.testRunner
     androidTestImplementation deps.test.espresso
-    implementation project(path: ':jstarter')
 }
