@@ -6,8 +6,8 @@ android {
 
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 28
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
         versionCode 1
         versionName "1.0"
 
@@ -26,8 +26,11 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:28.0.0-rc02'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation deps.kotlin.coroutines_core
+    implementation deps.kotlin.coroutines_android
+    implementation deps.dagger.javax
+    testImplementation deps.test.junit
+    testImplementation deps.test.mockk
+    testImplementation deps.test.kotlin_junit
+    implementation deps.kotlin.rx2
 }
