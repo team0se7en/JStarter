@@ -26,6 +26,6 @@ Add the dependency in your app build.gradle file
 ```Gradle
 dependencies {
 	...
-    implementation 'com.github.team0se7en:JStarter:beta2'
+    implementation 'com.github.team0se7en:JStarter:1.0.0'
 }
 ```
