@@ -38,7 +38,7 @@ abstract class Interactor<in P , out R >(dispatcher: CouroutineDispatchers){
  * of Either values that's could be either @param R
  * or @param Failure if failure is null that's mean unknown failure
  * the observable returned by this interactor will never invoke
- * onError methode the claaback will be only in onNext methode
+ * onError methode the callaback will be only in onNext methode
  * */
 
 abstract class ObservableEitherInteractor<R , in P , F:Failure>(private val schedulers:AppRxSchedulers){
@@ -58,7 +58,7 @@ abstract class ObservableEitherInteractor<R , in P , F:Failure>(private val sche
 
 /**
  * interctore runs in background thread and return a stream
- * of values values of type @param Type
+ * of values of type @param Type
  * this interactor is used like a normal observable
  * */
 

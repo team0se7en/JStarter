@@ -5,7 +5,7 @@ package com.roacult.kero.team7.jstarter.functional
   * either left @param L or right @param R
   * we use this class to return
   * Either.Right value
-  * or Either.Left value which is Failure
+  * or Either.Left value which is often a Failure
   * */
 
 sealed class Either<out L, out R> {
