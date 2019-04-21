@@ -38,5 +38,5 @@ dependencies {
     implementation deps.android.appcompat
     implementation deps.android.design
     implementation deps.dagger.support
-    implementation project(path: ':jstarter_domain')
+    implementation deps.base.domain
 }

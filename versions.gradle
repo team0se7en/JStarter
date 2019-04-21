@@ -9,6 +9,7 @@ ext.deps = [:]
 //def means we're making a local variable. We'll use this map to build our deps key/value
 //pairs below
 def versions = [:]
+versions.domain = "1.0.0"
 versions.lifecycle = "2.0.0-rc01"
 versions.junit = "4.12"
 versions.test_runner = "1.1.0-alpha4"
@@ -131,6 +132,10 @@ rxjava.core="io.reactivex.rxjava2:rxjava:$versions.rxJava"
 rxjava.rxKotlin = "io.reactivex.rxjava2:rxkotlin:$versions.rxKotlin"
 rxjava.rxAndroid= "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid"
 deps.rxJava = rxjava
+
+def base = [:]
+base.domain = "com.github.team0se7en:JStarter:d-$versions.domain"
+deps.base = base
 
 def build_versions = [:]
 build_versions.min_sdk = 16
