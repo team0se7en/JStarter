@@ -10,7 +10,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/jstarter_domain" />
-            <option value="$PROJECT_DIR$/jstarter_presentation" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
