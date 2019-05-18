@@ -74,7 +74,7 @@ abstract  class BaseViewModel <S: State> ( initialState:S ) : ViewModel() {
      * */
     protected fun <P,R,F: Failure> launchEitherObservableInteractor(interactor: ObservableEitherInteractor<R, P, F>,
                                                                     param : P,
-                                                                    errorHandler : (F?) -> Unit,
+                                                                    errorHandler : (F) -> Unit,
                                                                     dataHandler:(R)->Unit) :  Disposable{
         val dispos = interactor.observe(param) {
             it.either(errorHandler,dataHandler)
