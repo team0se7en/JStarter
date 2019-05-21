@@ -12,6 +12,7 @@ def versions = [:]
 versions.domain = "1.0.0"
 versions.presentation = "1.0.0"
 versions.jstarter = "1.0.0"
+versions.jcenter_plugin = "0.9.1"
 versions.lifecycle = "2.0.0-rc01"
 versions.junit = "4.12"
 versions.test_runner = "1.1.0-alpha4"
@@ -147,6 +148,7 @@ build_versions.target_sdk = 28
 ext.build_versions = build_versions
 
 deps.maven_plugin = "com.github.dcendents:android-maven-gradle-plugin:$versions.maven_plugin"
+deps.jcenter_plugin = "com.novoda:bintray-release:$versions.jcenter_plugin"
 deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 
 ext.deps = deps
