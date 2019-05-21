@@ -14,6 +14,8 @@ we also used MvRx concepts
 ## How to
 ### from jcenter
 
+Add the dependency in your app build.gradle file
+
 ```Gradle
 dependencies {
 	...
