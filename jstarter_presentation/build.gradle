@@ -1,8 +1,24 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.team0se7en'
+
+publish {
+
+    def groupProjectID = 'com.roacult.team7'
+    def artifactProjectID = 'Jstarter_presentation'
+    def publishVersionID = '1.0.1'
+
+    userOrg = 'roiacult'
+    repoName = 'Jstarter_presentation'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = ""
+    website = 'https://github.com/team0se7en/JStarter'
+}
 
 android {
     compileSdkVersion 28

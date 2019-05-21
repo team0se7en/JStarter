@@ -42,8 +42,4 @@ open class BaseFragment :DaggerFragment(){
     fun showMessage(resId: Int) {
         mActivity?.showMessage(resId)
     }
-
-    fun isNetworkConnected(): Boolean {
-        return mActivity?.isNetworkConnected() ?: false
-    }
 }
