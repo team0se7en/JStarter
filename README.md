@@ -12,7 +12,16 @@ we also used MvRx concepts
 [![](https://jitpack.io/v/team0se7en/JStarter.svg)](https://jitpack.io/#team0se7en/JStarter)
 
 ## How to
-#### Gradle
+### from jcenter
+
+```Gradle
+dependencies {
+	...
+    implementation 'com.roacult.team7:Jstarter:1.0.1'
+}
+```
+### or from jitpack
+
 Add it in your root build.gradle at the end of repositories:
 ```Gradle
 allprojects {
@@ -26,6 +35,6 @@ Add the dependency in your app build.gradle file
 ```Gradle
 dependencies {
 	...
-    implementation 'com.github.team0se7en:JStarter:1.0.0'
+    implementation 'com.github.team0se7en:JStarter:1.0.1'
 }
 ```
