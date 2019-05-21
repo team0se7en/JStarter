@@ -1,0 +1,28 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+
+    def groupProjectID = 'com.roacult.team7'
+    def artifactProjectID = 'Jstarter_domain'
+    def publishVersionID = '1.0.1'
+
+    userOrg = 'roiacult'
+    repoName = 'Jstarter_domain'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = ""
+    website = 'https://github.com/team0se7en/JStarter'
+}
+
+dependencies {
+    implementation deps.kotlin.kotlin_jre
+    implementation deps.kotlin.coroutines_android
+    implementation deps.kotlin.coroutines_core
+    implementation deps.kotlin.rx2
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"

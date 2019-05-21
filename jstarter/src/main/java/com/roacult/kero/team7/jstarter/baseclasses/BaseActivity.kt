@@ -56,9 +56,9 @@ abstract class BaseActivity : DaggerAppCompatActivity() {
         showMessage(getString(resId))
     }
 
-    fun isNetworkConnected(): Boolean {
-        val activeNetwork = (this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager).activeNetworkInfo
-        return activeNetwork != null && activeNetwork.isConnected
-    }
+//    fun isNetworkConnected(): Boolean {
+//        val activeNetwork = (this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager).activeNetworkInfo
+//        return activeNetwork != null && activeNetwork.isConnected
+//    }
 }
 

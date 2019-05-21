@@ -1,1 +1,1 @@
-include ':app', ':jstarter'
+include ':app', ':jstarter', ':Jstarter_domain', ':jstarter_presentation'
