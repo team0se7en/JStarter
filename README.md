@@ -19,7 +19,7 @@ Add the dependency in your app build.gradle file
 ```Gradle
 dependencies {
 	...
-    implementation 'com.roacult.team7:Jstarter:1.0.1'
+    implementation 'com.roacult.team7:Jstarter:1.0.2'
 }
 ```
 ### or from jitpack
