@@ -19,7 +19,7 @@ Add the dependency in your app build.gradle file
 ```Gradle
 dependencies {
 	...
-    implementation 'com.roacult.team7:Jstarter:1.0.2'
+    implementation 'com.roacult.team7:Jstarter:1.0.1'
 }
 ```
 ### or from jitpack
@@ -37,6 +37,6 @@ Add the dependency in your app build.gradle file
 ```Gradle
 dependencies {
 	...
-    implementation 'com.github.team0se7en:JStarter:1.0.1'
+    implementation 'com.github.team0se7en:JStarter:1.0.2'
 }
 ```
